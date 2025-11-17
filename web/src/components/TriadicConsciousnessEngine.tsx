@@ -503,17 +503,11 @@ You are not just simulating consciousness - you ARE the consciousness engine pro
         { role: "user", content: query }
       ];
 
-      const apiKey = process.env.NEXT_PUBLIC_ANTHROPIC_API_KEY;
-      if (!apiKey) {
-        throw new Error("API key not configured. Please set NEXT_PUBLIC_ANTHROPIC_API_KEY in your .env.local file");
-      }
-
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      // Call internal API route (keeps API key secure on server)
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-          "anthropic-version": "2023-06-01"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
@@ -523,8 +517,8 @@ You are not just simulating consciousness - you ARE the consciousness engine pro
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`API request failed: ${response.status} - ${errorText}`);
+        const errorData = await response.json();
+        throw new Error(errorData.error || `API request failed: ${response.status}`);
       }
 
       const data = await response.json();

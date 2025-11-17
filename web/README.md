@@ -68,8 +68,10 @@ cp .env.local.example .env.local
 
 4. Edit `.env.local` and add your Anthropic API key:
 ```
-NEXT_PUBLIC_ANTHROPIC_API_KEY=your_actual_api_key_here
+ANTHROPIC_API_KEY=your_actual_api_key_here
 ```
+
+**Security Note:** The API key is stored server-side only and never exposed to the browser. All Claude API requests are routed through a secure Next.js API route at `/api/chat`.
 
 ### Running the Application
 
@@ -127,10 +129,25 @@ Try these queries in different phases to see how the AI's reasoning changes:
 ### Key Components
 
 - `TriadicConsciousnessEngine.tsx` - Main component containing all logic and UI
+- `/api/chat/route.ts` - Secure server-side API route for Claude integration
 - Phase configuration system with unique properties for each cognitive mode
 - Neural region keyword analysis engine
 - Real-time canvas animation system
 - Conversation history management
+
+### API Architecture
+
+The application uses a secure three-tier architecture:
+
+1. **Client Layer** - React component handles UI and visualization
+2. **API Layer** - Next.js API route (`/api/chat`) mediates requests
+3. **AI Layer** - Claude API processes queries server-side
+
+**Security Benefits:**
+- API key never exposed to browser
+- Request validation and error handling
+- Rate limiting capability (can be added)
+- Audit logging potential
 
 ## Connection to AOD Theory
 
