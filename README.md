@@ -3996,6 +3996,56 @@ This dissertation, though substantial, represents a beginning, not an ending. Th
 Science advances through bold hypotheses, rigorous testing, and open debate. I offer Atchley Optimal Dynamics in that spirit: as a conjecture worthy of scrutiny, a framework inviting elaboration, and above all, a starting point for continued discovery.
 The networks that surround us—neural, social, technological—encode profound mathematical principles. By understanding these principles, we gain not only intellectual satisfaction but practical power: the ability to design better systems, solve complex problems, and harness the self-organizing dynamics that pervade nature.
 May this work contribute, however modestly, to that endeavor.
+
+---
+
+## 🚀 INTERACTIVE DEMONSTRATIONS
+
+This repository includes both the theoretical framework and practical implementations of AOD theory:
+
+### Triadic Consciousness Engine - Web Visualization
+
+An interactive web application that demonstrates consciousness modeling through triadic phase dynamics, embodying core AOD principles of self-organization, adaptive dynamics, and dialectical integration.
+
+**Location:** `/web/`
+
+**Features:**
+- Four cognitive phases (Observational, Apollonian, Dionysian, Synthesis)
+- Real-time neural network visualization
+- Dynamic neural region activation analysis
+- Interactive AI chat interface powered by Claude
+- Comprehensive cognitive reasoning ledger
+- Live system metrics and thought process tracking
+
+**Quick Start:**
+```bash
+cd web
+npm install
+cp .env.local.example .env.local
+# Add your Anthropic API key to .env.local
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to experience the engine.
+
+**Documentation:** See [web/README.md](web/README.md) for complete setup instructions, architecture details, and usage examples.
+
+### Python Simulation Framework
+
+**Core Implementation:** `aod_core.py` - Complete AOD simulation engine
+**Crisis Simulation:** `crisis_simulation.py` - Network resilience testing
+**Examples:** `examples/` - Sample applications and use cases
+
+**Quick Start:**
+```bash
+pip install -r requirements.txt
+python crisis_simulation.py
+```
+
+**Results:** Simulation outputs are saved to `aod_simulation_results.json` with visualization in `aod_crisis_simulation.png`
+
+---
+
 REFERENCES (pp. 969-1016)
 [500+ references across complex systems, network science, thermodynamics, information theory, evolutionary biology, optimization, neuroscience, sociology, engineering...]
 APPENDICES (pp. 1017-1168)
