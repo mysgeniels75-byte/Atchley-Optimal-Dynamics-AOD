@@ -35,3 +35,16 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Next.js
+web/.next/
+web/out/
+web/node_modules/
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
+
+# TypeScript
+web/*.tsbuildinfo
+web/next-env.d.ts
