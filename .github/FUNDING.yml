@@ -1,0 +1,28 @@
+# GitHub Sponsors & Funding Configuration
+# Atchley Optimal Dynamics (AOD) Theory - Research Project
+#
+# This project represents fundamental research in theoretical neuroscience,
+# thermodynamics, and computational optimization. Funding supports:
+# - Empirical validation experiments
+# - Hardware prototyping (memristor arrays, neuromorphic chips)
+# - Computational resources for large-scale simulations
+# - Open-source development and documentation
+# - Peer-reviewed publication costs
+
+# GitHub Sponsors (uncomment and add username when available)
+# github: [mysgeniels75-byte]
+
+# Patreon (research tier sponsorship)
+# patreon: aod_research
+
+# Open Collective (transparent research funding)
+# open_collective: aod-theory
+
+# Ko-fi (one-time donations for computational resources)
+# ko_fi: aod_theory
+
+# Custom funding links for institutional/grant support
+custom:
+  - "https://github.com/mysgeniels75-byte/Atchley-Optimal-Dynamics-AOD#funding"
+  # - "Your institutional research fund URL"
+  # - "Grant application portal"
